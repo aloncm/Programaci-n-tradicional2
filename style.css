@@ -97,7 +97,8 @@ body {
 #tab3:checked ~ .tab-labels .tab-label:nth-child(3),
 #tab4:checked ~ .tab-labels .tab-label:nth-child(4),
 #tab5:checked ~ .tab-labels .tab-label:nth-child(5),
-#tab6:checked ~ .tab-labels .tab-label:nth-child(6) {
+#tab6:checked ~ .tab-labels .tab-label:nth-child(6),
+#tab7:checked ~ .tab-labels .tab-label:nth-child(7) {
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
@@ -123,7 +124,8 @@ body {
 #tab3:checked ~ .tab-contents .tab-content:nth-child(3),
 #tab4:checked ~ .tab-contents .tab-content:nth-child(4),
 #tab5:checked ~ .tab-contents .tab-content:nth-child(5),
-#tab6:checked ~ .tab-contents .tab-content:nth-child(6) {
+#tab6:checked ~ .tab-contents .tab-content:nth-child(6),
+#tab7:checked ~ .tab-contents .tab-content:nth-child(7) {
     display: block;
 }
 
@@ -444,4 +446,21 @@ code {
 }
 
     
+}
+/* Video principal - estilo global */
+.hero-video {
+    width: 100%;        /* siempre ocupa el ancho del contenedor */
+    max-width: 800px;   /* límite en pantallas grandes */
+    height: auto;       /* mantiene proporción */
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;     /* centra el video */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* opcional */
+}
+
+/* Ajuste en pantallas pequeñas */
+@media (max-width: 768px) {
+    .hero-video {
+        max-width: 100%;  /* en tablets y celulares ocupa todo el ancho */
+    }
 }
